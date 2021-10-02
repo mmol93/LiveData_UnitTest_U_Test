@@ -77,13 +77,15 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$Glide_version"
     kapt "com.github.bumptech.glide:compiler:$Glide_version"
 
+    // test 패키지에서 test를 실시하기 때문에 androidTestImplementation에서 복사해서
+    // testImplementation로 바꾼 다음에 붙여넣어준다
     testImplementation 'junit:junit:4.13'
     testImplementation "androidx.arch.core:core-testing:2.1.0"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1"
     testImplementation "com.google.truth:truth:1.0.1"
     testImplementation 'androidx.test.ext:junit:1.1.2'
+    // robolectric: 유닛 테스트를 할 때 단말기를 켜지않고 테스트를 할 수 있게 해준다
     testImplementation "org.robolectric:robolectric:4.4"
-
 
     androidTestImplementation "junit:junit:4.13"
     androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
@@ -91,6 +93,4 @@ dependencies {
     androidTestImplementation "com.google.truth:truth:1.0.1"
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-
 }

@@ -3,6 +3,7 @@ package com.anushka.tmdbclient.data.repository.movie
 import com.anushka.tmdbclient.data.model.movie.Movie
 import com.anushka.tmdbclient.domain.repository.MovieRepository
 
+// 테스트 환경에서 사용하기 위한 Fake 객체를 만든다
 class FakeMovieRepository : MovieRepository {
     private val movies = mutableListOf<Movie>()
 
